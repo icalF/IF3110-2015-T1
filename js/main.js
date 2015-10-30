@@ -50,7 +50,7 @@ function voter(vote_change, answer, post_id, id) {
   var db_name = answer ? 'answer' : 'question';
   var request = "id="+post_id+"&dbname="+db_name+"&val="+vote;
 
-  xmlhttp.open("POST", "vote.php", true);
+  xmlhttp.open("POST", "vote", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(request);
 };
